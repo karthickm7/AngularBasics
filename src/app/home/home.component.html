@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <form (submit)="handlesubmit()">
+        <h1>Signup</h1>
+        <div class="inputbox">
+          <label>userName</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Enter name"
+            name="username"
+            [(ngModel)]="userlist.username"
+            required
+          />
+        </div>
+        <div class="inputbox">
+          <label>Email</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Enter name"
+            name="email"
+            [(ngModel)]="userlist.email"
+            required
+          />
+        </div>
+        <div class="inputbox">
+          <label>Pssword</label>
+          <input
+            class="form-control"
+            type="password"
+            placeholder="Enter name"
+            name="psw"
+            [(ngModel)]="userlist.psw"
+            required
+          />
+        </div>
+        <div class="inputbox">
+          <label>Confirm Password</label>
+          <input
+            class="form-control"
+            type="password"
+            placeholder="Enter name"
+            name="cpsw"
+            [(ngModel)]="userlist.cpsw"
+            required
+          />
+        </div>
+        <div class="btn">
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
