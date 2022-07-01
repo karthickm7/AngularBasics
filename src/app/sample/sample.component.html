@@ -1,0 +1,23 @@
+<div>
+<h4>string interpolation sample</h4>
+<p [ngStyle]="{ backgroundColor : getColor()}" [ngClass]="{online:serverstatus === 'online'}">
+  {{ "server" }} runs with {{ getServerStatus() }} by this id {{ serverid }} 
+</p>
+</div>
+<hr />
+<h1>
+  <button (click)="toggleOn =!toggleOn">Toggle Greetings</button>
+</h1>
+<div *ngIf="!toggleOn ; else elseBlock" >
+  <h2>Hello</h2>
+  <p>Good morning to you</p>
+</div>
+<ng-template #elseBlock>No greeting, Lagbaja nothing for you.</ng-template>
+<hr/>
+<!-- <p>Today is Friday and this is a dummy text element to make you feel better</p>
+<p>Understanding the ngIf directive with the else clause</p> -->
+<app-home *ngFor="let servers of server"></app-home>
+<hr/>
+<button (click)="onToggleDetail()">Display Detail</button>
+<div *ngFor="let logItem of logs" [ngStyle]="{backgroundColor: logItem>=5 ? 'blue' : 'transparent'}" 
+  [ngClass]="{'white-text':logItem >=5}">{{logItem}}</div>

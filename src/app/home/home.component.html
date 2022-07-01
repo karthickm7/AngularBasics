@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <form (submit)="handlesubmit()">
+      <form (submit)="handleSubmit()">
         <h1>Signup</h1>
         <div class="inputbox">
           <label>userName</label>
@@ -48,9 +48,16 @@
           />
         </div>
         <div class="btn">
-          <button type="submit" class="btn btn-primary">Sign Up</button>
+          <button [disabled]="!allowButton" type="submit" class="btn btn-primary">Sign Up</button>
         </div>
       </form>
     </div>
   </div>
 </div>
+
+
+<hr/>
+
+<input class="form-control" type="text" name="server" [(ngModel)]='server'/>
+<P>{{server}}</P>
+
