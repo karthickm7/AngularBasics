@@ -1,10 +1,21 @@
-
 <!-- <input type="text" name="name" [(ngModel)]='name'>
 <p>{{name}}</p> -->
 
 <h3>i'm in the app component</h3>
-<hr/>
+<hr />
 <!-- <div>
     <h1>Welcome to ngif app</h1>
 </div> -->
- <app-sample></app-sample>
+<app-sample></app-sample>
+<hr />
+<app-cockpit (serverCreated)="onServerAdded($event)"
+(blueprintCreated)="onBluePrintAdded($event)"></app-cockpit>
+<hr />
+<div class="row">
+  <div class="col-xs-12">
+    <app-server-element
+      *ngFor="let serverElement of serverElements"
+      [element]="serverElement"
+    ></app-server-element>
+  </div>
+</div>
